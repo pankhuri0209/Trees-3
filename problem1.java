@@ -1,13 +1,22 @@
 // Time Complexity : o(n*h)
 // Space Complexity :  o(n*h) + o(h)
-// Did this code successfully run on Leetcode :
-// Any problem you faced while coding this :
+// Did this code successfully run on Leetcode :Yes
+// Any problem you faced while coding this :No
 
 
 import java.util.ArrayList;
 import java.util.List;
 
 // Your code here along with comments explaining your approach
+/*
+ * Approach:
+ * 1. We are given a binary tree and a target sum. Our goal is to find all root-to-leaf paths where each path's sum equals the target sum.
+ * 2. We use a recursive depth-first search (DFS) approach to explore all possible paths from the root to the leaves.
+ * 3. At each node, we add the node's value to the current path sum (`curr`) and to the current path list (`path`).
+ * 4. If we reach a leaf node and the current path sum equals the target sum, we add the path to our result list.
+ * 5. We make recursive calls to the left and right children to continue the search.
+ * 6. We create a new list (`path`) at each recursive call to avoid modifying the same list in different branches of the recursion.
+ */
 //Problem1 (https://leetcode.com/problems/path-sum-ii/)
 public class problem1 {
  public class TreeNode {
